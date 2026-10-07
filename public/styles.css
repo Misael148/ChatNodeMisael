@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at top, #251010 0%, #0b0b0b 45%, #050505 100%);
+    color: #f5f5f5;
+}
+
+.contenedor {
+    width: 92%;
+    max-width: 950px;
+    margin: 40px auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    color: #ff3030;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    color: #d8d8d8;
+    font-size: 17px;
+}
+
+.tarjeta-login,
+#chat {
+    background: rgba(15, 15, 15, 0.96);
+    border: 1px solid #7d1818;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 0 24px rgba(255, 0, 0, 0.12);
+}
+
+.tarjeta-login {
+    max-width: 520px;
+    margin: auto;
+}
+
+.tarjeta-login h2 {
+    text-align: center;
+    color: #ffffff;
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #5f5f5f;
+    border-radius: 8px;
+    background: #151515;
+    color: #ffffff;
+    font-size: 15px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #ff3030;
+    box-shadow: 0 0 8px rgba(255, 48, 48, 0.25);
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    background: #c51e1e;
+    color: white;
+    padding: 13px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: #ef2b2b;
+    transform: translateY(-1px);
+}
+
+.tarjeta-login button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.oculto {
+    display: none;
+}
+
+.barra-usuario {
+    padding: 12px 14px;
+    background: #201010;
+    border-left: 4px solid #ff3030;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+#ventanaMensajes {
+    height: 420px;
+    overflow-y: auto;
+    background: #090909;
+    border: 1px solid #383838;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.mensaje,
+.archivo-mensaje {
+    margin-bottom: 12px;
+    padding: 11px;
+    background: #171717;
+    border-left: 3px solid #c51e1e;
+    border-radius: 7px;
+}
+
+.mensaje strong,
+.archivo-mensaje strong {
+    color: #ff4b4b;
+}
+
+.notificacion {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+#escribiendo {
+    min-height: 22px;
+    color: #ff7777;
+    font-style: italic;
+}
+
+.zona-mensaje {
+    display: grid;
+    grid-template-columns: 1fr 130px;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.zona-archivo {
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #333;
+}
+
+.zona-archivo label {
+    display: block;
+    margin-bottom: 8px;
+    color: #d6d6d6;
+}
+
+.zona-archivo input {
+    margin-bottom: 10px;
+}
+
+.zona-archivo button {
+    width: 100%;
+}
+
+.archivo-mensaje img {
+    display: block;
+    max-width: 320px;
+    max-height: 260px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.archivo-mensaje video {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    margin: 10px 0;
+}
+
+.archivo-mensaje a {
+    color: #ff6666;
+    font-weight: bold;
+    word-break: break-word;
+}
+
+@media (max-width: 650px) {
+    .contenedor {
+        margin: 20px auto;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .zona-mensaje {
+        grid-template-columns: 1fr;
+    }
+
+    #ventanaMensajes {
+        height: 360px;
+    }
+}
