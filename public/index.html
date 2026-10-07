@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Chat Socket - Misael</title>
+
+    <link
+        rel="stylesheet"
+        href="styles.css"
+    >
+
+</head>
+
+<body>
+
+<div class="contenedor">
+
+    <h1>
+        Práctica de evaluación usando
+        Sockets de comunicación
+    </h1>
+
+    <h2>
+        Chat Node.js - Misael Alexander
+    </h2>
+
+
+    <!-- LOGIN -->
+
+    <div id="login">
+
+        <input
+            type="text"
+            id="usuario"
+            placeholder="Ingresa tu nombre"
+        >
+
+        <button id="btnIngresar">
+            Ingresar al chat
+        </button>
+
+    </div>
+
+
+    <!-- CHAT -->
+
+    <div
+        id="chat"
+        class="oculto"
+    >
+
+        <div class="barraUsuario">
+
+            Usuario:
+
+            <strong id="nombreUsuario"></strong>
+
+        </div>
+
+
+        <div id="ventanaMensajes">
+
+            <div id="mensajes"></div>
+
+        </div>
+
+
+        <p id="escribiendo"></p>
+
+
+        <div class="zonaMensaje">
+
+            <input
+                type="text"
+                id="mensaje"
+                placeholder="Escribe un mensaje..."
+            >
+
+            <button id="btnEnviar">
+                Enviar
+            </button>
+
+        </div>
+
+
+        <div class="zonaArchivo">
+
+            <input
+                type="file"
+                id="archivo"
+            >
+
+            <button id="btnArchivo">
+                Enviar archivo
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SONIDO -->
+
+<audio
+    id="sonidoMensaje"
+    preload="auto"
+>
+    <source
+        src="https://assets.mixkit.co/active_storage/sfx/2354/2354-preview.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+<!-- SOCKET.IO -->
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="chat.js"></script>
+
+</body>
+
+</html>
